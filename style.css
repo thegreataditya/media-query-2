@@ -1,0 +1,171 @@
+/* General Styling */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color: #111827;
+    color: #ffffff;
+}
+
+/* designing the header */
+header{
+    display: flex;
+    justify-content: flex-end;
+    padding: 15px;
+}
+
+header nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 20px;
+}
+
+header nav a{
+    text-decoration: none;
+    color: #ffffff;
+    padding: 7px;
+}
+
+header a.active-page{
+    background-color: #742be2;
+    border-radius: 20px;
+}
+
+header div{
+    display: none;
+}
+
+/* designing the main section */
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 20%;
+}
+
+.intro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.intro .intro-left-child{
+    display: flex;
+    flex-direction: column;
+}
+
+.intro .intro-left-child img{
+    height: 1rem;
+}
+
+.intro-left-child .yellow{
+    color: #ffff00;
+    font-size: medium;
+}
+
+.intro-left-child h2{
+    margin: 10px 0;
+}
+
+.intro .intro-right-child img{
+    height: 25rem;
+    margin: 0 10px;
+}
+
+
+/* designing the projects section */
+.projects-con{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.projects-con h3{
+    padding: 3px 0;
+    border-bottom: 2px solid blue;
+    margin-bottom: 15px;
+}
+
+.projects{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+}
+
+.projects .project-child img{
+    height: 10rem;
+}
+
+/* designing the contact section */
+.contact-con{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-con h3{
+    padding: 3px 0;
+    border-bottom: 2px solid blue;
+}
+
+.contact-con .contact{
+    display: flex;
+    gap: 10px;
+    margin-top:8px;
+}
+
+.contact-con .contact img{
+    height: 1rem;
+}
+
+
+/* making the website responsive */
+@media screen and (max-width:425px) {
+    header{
+        justify-content: flex-start;
+    }
+    
+    header nav{
+        display: none;
+    }
+
+    header div{
+        display: block;
+    }
+
+    header div img{
+        height: 1.5rem;
+    }
+
+    main{
+        padding: 10%;
+    }
+
+    .intro{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .intro .intro-right-child img{
+        width: 60vw;
+        height: 40vh;
+    }
+
+    .projects{
+        display: flex;
+        flex-direction: column;
+    }
+}
